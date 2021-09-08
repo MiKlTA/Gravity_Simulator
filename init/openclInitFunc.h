@@ -3,11 +3,11 @@
 
 
 
-#include "commonLibraries.h"
-#include "constants.h"
-#include "globalVars.h"
+#include "../commonLibraries.h"
+#include "../constants.h"
+#include "../globalVars.h"
 
-#include "loadDataFunc.h"
+#include "../input/loadDataFunc.h"
 
 
 

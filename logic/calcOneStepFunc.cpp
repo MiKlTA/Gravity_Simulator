@@ -13,22 +13,26 @@ void calcOneStep(
     
     err = clEnqueueWriteBuffer(
                 command_queue, buffer, CL_TRUE,
-                0, c_objectArgsCount * c_objectsCount * sizeof(float),
+                0, c_objectArgsCount * g_objectsCount * sizeof(float),
                 oldestStep,
                 0, nullptr, nullptr
                 );
     
-    const unsigned int workGroupSize[] = {c_objectsCount, c_objectsCount};
+    const unsigned int workGroupSize[]
+            = {
+        static_cast<unsigned int>(g_objectsCount),
+        static_cast<unsigned int>(g_objectsCount)
+    };
     err = clEnqueueNDRangeKernel(
                 command_queue, kernel,
                 2, nullptr, workGroupSize, nullptr,
                 0, nullptr, nullptr
                 );
     
-    float *newStep = new float[c_objectArgsCount * c_objectsCount];
+    float *newStep = new float[c_objectArgsCount * g_objectsCount];
     err = clEnqueueReadBuffer(
                 command_queue, buffer, CL_TRUE,
-                0, c_objectArgsCount * c_objectsCount * sizeof(float), newStep,
+                0, c_objectArgsCount * g_objectsCount * sizeof(float), newStep,
                 0, nullptr, nullptr
                 );
     objects->push(newStep);

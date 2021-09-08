@@ -3,8 +3,8 @@
 
 
 
-#include "commonLibraries.h"
-#include "globalVars.h"
+#include "../commonLibraries.h"
+#include "../globalVars.h"
 
 
 

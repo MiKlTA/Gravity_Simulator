@@ -6,11 +6,13 @@
 #include "commonLibraries.h"
 #include "globalVars.h"
 
-#include "loadDataFunc.h"
-#include "windowInitFunc.h"
-#include "windowRenderFunc.h"
-#include "openglInitFunc.h"
-#include "openclInitFunc.h"
+#include "init/openglInitFunc.h"
+#include "init/openclInitFunc.h"
+#include "init/windowInitFunc.h"
+
+#include "input/loadDataFunc.h"
+
+#include "output/windowRenderFunc.h"
 
 
 

@@ -27,7 +27,7 @@ void openclInit(
     
     buffer = clCreateBuffer(
                 context, CL_MEM_READ_WRITE,
-                c_objectArgsCount * c_objectsCount * sizeof(float), nullptr,
+                c_objectArgsCount * g_objectsCount * sizeof(float), nullptr,
                 &err
                 );
     

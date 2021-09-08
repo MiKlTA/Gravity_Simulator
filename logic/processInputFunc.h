@@ -3,9 +3,9 @@
 
 
 
-#include "commonLibraries.h"
-#include "globalVars.h"
-#include "constants.h"
+#include "../commonLibraries.h"
+#include "../globalVars.h"
+#include "../constants.h"
 
 
 

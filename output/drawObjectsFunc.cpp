@@ -5,7 +5,7 @@
 void drawObjects(float *objects, GLuint transformLoc, GLuint colorLoc, GLuint objPosLoc,
                  GLuint shiftLoc, GLuint projectionLoc)
 {
-    for (int i = 0; i < c_objectsCount; ++i)
+    for (int i = 0; i < g_objectsCount; ++i)
     {
         const float xPos = objects[c_objectArgsCount * i + 0];
         const float yPos = objects[c_objectArgsCount * i + 1];
@@ -20,7 +20,7 @@ void drawObjects(float *objects, GLuint transformLoc, GLuint colorLoc, GLuint ob
         
         glUniform2f(objPosLoc, xPos - g_horShift, yPos - g_verShift);
         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, &projection[0][0]);
-        glUniform3f(colorLoc, 0.7f, mass / (2.0f * c_maxMass) + 0.5f, 0.5f);
+        glUniform3f(colorLoc, 0.7f, mass / (2.0f * g_maxMass) + 0.5f, 0.5f);
         glDrawArrays(GL_TRIANGLES, 0, 3);
     }
 }

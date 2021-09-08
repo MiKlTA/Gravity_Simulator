@@ -27,4 +27,4 @@ float g_areaSize = 10.0f;
 float g_maxVelocity = 0.00001f;
 
 float g_minMass = 0.000001f;
-float g_maxMass = 0.00001;
+float g_maxMass = 0.00001f;

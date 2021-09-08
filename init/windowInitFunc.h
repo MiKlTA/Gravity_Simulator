@@ -3,9 +3,9 @@
 
 
 
-#include "commonLibraries.h"
+#include "../commonLibraries.h"
 
-#include "windowCallbackFuncs.h"
+#include "../input/windowCallbackFuncs.h"
 
 
 
